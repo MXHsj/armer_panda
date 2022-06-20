@@ -1,6 +1,9 @@
 robots:
   - name: arm # default is panda model roboticstoolbox.models.Panda
-    model: roboticstoolbox.models.Panda
+    # model: roboticstoolbox.models.Panda
+    model: 
+      urdf_file: franka_description/robots/panda_arm.urdf.xacro
+      qr: [0, -0.3, 0, -2.2, 0, 2.0, 0.78539816339]
     type: armer_panda.robots.PandaROSRobot
     joint_state_topic: /franka_state_controller/joint_states
     joint_velocity_topic:  /joint_group_velocity_controller/command # default
